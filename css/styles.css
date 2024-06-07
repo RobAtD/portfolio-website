@@ -91,6 +91,7 @@ input[type="submit"]:focus {
 
 .navigation-list {
     list-style-type: none;
+    padding: 0 10px;
 }
 
 .navigation-list li {
@@ -105,6 +106,8 @@ input[type="submit"]:focus {
     padding: 10px;
     position: relative;
     text-shadow: none;
+    margin: 10px auto 0;
+    display: inline-block;
 }
 
 /* navigation element border */
@@ -182,6 +185,14 @@ input[type="submit"]:focus {
     box-shadow: 2px 2px 10px var(--shadow-color);
 }
 
+table {
+    margin: auto;
+}
+
+th {
+    padding: 5px 10px;
+}
+
 /* footer styles */
 
 .page-footer {
@@ -199,18 +210,18 @@ input[type="submit"]:focus {
     top: 0;
     left: 0;
     background-color: var(--background-color);
-    min-width: 370px;
+    min-width: 320px;
     width: 100%;
-    padding: 20px;
     border-bottom: 1px solid var(--border-bottom-color);
 }
 
 .page-header__item {
-    flex: 0 1 200px;
+    flex: 0 1 auto;
 }
 
 img.page-header__item {
     object-fit: contain;
+    width: 270px;
 }
 
 .page-header__item:last-child {
@@ -250,12 +261,8 @@ img.page-header__item {
 }
 
 .spinning-dragon {
-    transform-origin: 50% 50%;
+    transform-origin: 50% 40%;
     animation: spinning 5s infinite linear;
-}
-
-.flying-dragon {
-    animation: 5s fly infinite alternate linear;
 }
 
 @media all and (max-width: 500px) {
@@ -267,6 +274,41 @@ img.page-header__item {
 @media all and (min-width: 500px) and (max-width: 750px) {
     .project-list {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 676px) {
+    .page-header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .page-header img {
+        width: 100%;
+    }
+
+    .page-header__item:last-child {
+        text-align: center;
+    }
+
+    .navigation-list {
+        padding: 0;
+    }
+
+    main {
+        margin: 330px 10px 0;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 340px 10px 0;
+    }
+
+    .profile__portrait {
+        margin: auto;
     }
 }
 
@@ -287,33 +329,10 @@ img.page-header__item {
     h2 {
         font-size: 20px;
     }
-
-    main {
-        margin: 200px 10 0;
-    }
-
-    .navigation-list__item,
-    .navigation-list__item--active,
-    .navigation-list__item:hover,
-    .navigation-list__item--active:hover {
-        padding: 3px;
-        margin: 10px auto 0;
-        display: inline-block;
-    }
 }
 
 @keyframes spinning {
     100% {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes fly {
-    from {
-        transform: translate(0, 0);
-    }
-
-    to {
-        transform: translate(10px, 10px);
     }
 }

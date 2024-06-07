@@ -1,9 +1,9 @@
 /*
-    * Prefixed by https://autoprefixer.github.io
-    * PostCSS: v8.4.14,
-    * Autoprefixer: v10.4.7
-    * Browsers: last 2 version
-    */
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
 
 * {
     -webkit-box-sizing: border-box;
@@ -12,7 +12,7 @@
 
 body {
     background-color: #f8faf9;
-    font-family: "Titillium Web", "sans-serif";
+    font-family: 'Titillium Web', 'sans-serif';
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -126,6 +126,7 @@ input[type="submit"]:focus {
 
 .navigation-list {
     list-style-type: none;
+    padding: 0 10px;
 }
 
 .navigation-list li {
@@ -140,6 +141,8 @@ input[type="submit"]:focus {
     padding: 10px;
     position: relative;
     text-shadow: none;
+    margin: 10px auto 0;
+    display: inline-block;
 }
 
 /* navigation element border */
@@ -260,6 +263,14 @@ input[type="submit"]:focus {
     box-shadow: 2px 2px 10px #2b2b2b;
 }
 
+table {
+    margin: auto;
+}
+
+th {
+    padding: 5px 10px;
+}
+
 /* footer styles */
 
 .page-footer {
@@ -284,21 +295,21 @@ input[type="submit"]:focus {
     top: 0;
     left: 0;
     background-color: #f8faf9;
-    min-width: 370px;
+    min-width: 320px;
     width: 100%;
-    padding: 20px;
     border-bottom: 1px solid rgba(43, 43, 43, 0.4);
 }
 
 .page-header__item {
     -webkit-box-flex: 0;
-    -ms-flex: 0 1 200px;
-    flex: 0 1 200px;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
 }
 
 img.page-header__item {
     -o-object-fit: contain;
     object-fit: contain;
+    width: 270px;
 }
 
 .page-header__item:last-child {
@@ -345,15 +356,10 @@ img.page-header__item {
 }
 
 .spinning-dragon {
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 40%;
+    transform-origin: 50% 40%;
     -webkit-animation: spinning 5s infinite linear;
     animation: spinning 5s infinite linear;
-}
-
-.flying-dragon {
-    -webkit-animation: 5s fly infinite alternate linear;
-    animation: 5s fly infinite alternate linear;
 }
 
 @media all and (max-width: 500px) {
@@ -367,6 +373,53 @@ img.page-header__item {
     .project-list {
         -ms-grid-columns: 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 676px) {
+    .page-header {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .page-header img {
+        width: 100%;
+    }
+
+    .page-header__item:last-child {
+        text-align: center;
+    }
+
+    .navigation-list {
+        padding: 0;
+    }
+
+    main {
+        margin: 330px 10px 0;
+    }
+
+    .profile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 340px 10px 0;
+    }
+
+    .profile__portrait {
+        margin: auto;
     }
 }
 
@@ -387,19 +440,6 @@ img.page-header__item {
     h2 {
         font-size: 20px;
     }
-
-    main {
-        margin: 200px 10 0;
-    }
-
-    .navigation-list__item,
-    .navigation-list__item--active,
-    .navigation-list__item:hover,
-    .navigation-list__item--active:hover {
-        padding: 3px;
-        margin: 10px auto 0;
-        display: inline-block;
-    }
 }
 
 @-webkit-keyframes spinning {
@@ -413,29 +453,5 @@ img.page-header__item {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes fly {
-    from {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-
-    to {
-        -webkit-transform: translate(10px, 10px);
-        transform: translate(10px, 10px);
-    }
-}
-
-@keyframes fly {
-    from {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-
-    to {
-        -webkit-transform: translate(10px, 10px);
-        transform: translate(10px, 10px);
     }
 }
