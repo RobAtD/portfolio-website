@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/Robs Place Favicon.png" />
+    <!--Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalize browser stylings -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+    <title>Robert's Portfolio</title>
+  </head>
+  <body>
+    <!-- Header including the logo and the main navigation -->
+    <header class="page-header">
+      <img
+        src="./img/logo.png"
+        class="page-header__item"
+        alt="A logo image of a dragon head and the text RD Development"
+      />
+      <nav class="page-header__item">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a
+              href="index.html"
+              role="menuitem"
+              class="navigation-list__item"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="about.html"
+              role="menuitem"
+              class="navigation-list__item"
+              >About me</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="work.html"
+              role="menuitem"
+              class="navigation-list__item"
+              >My work</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="contact.html"
+              role="menuitem"
+              class="navigation-list__item--active"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main content -->
+    <main>
+      <h1>Contact</h1>
+      <div>
+        Robert Ditler<br />
+        Lohmühlenstraße 65<br />
+        12435 Berlin<br />
+        <br />
+        Telephone:
+        <a
+          href="tel:+49 30 4849 2016"
+          aria-label="Call me at + 4 9 3 0 4 8 4 9 2 0 1 6"
+          >+49 30 4849 2016</a
+        >
+        <br />
+        Skype: <a href="skype:hello.careerfoundry">hello.careerfoundry</a><br />
+        Mail:
+        <a href="mailto:office@careerfoundry.com">office@careerfoundry.com</a
+        ><br />
+        <a href="mailto:office@careerfoundry.com">Contact me</a>
+      </div>
+      <!-- Contact form -->
+      <h2>Leave me a message</h2>
+      <form action="" method="post" id="contact-form">
+        <label class="standard-label" for="user-name">Name:</label>
+        <input
+          type="text"
+          id="user-name"
+          placeholder="Your name"
+          required
+        /><br />
+        <label class="standard-label" for="user-email">Email:</label>
+        <input
+          type="email"
+          id="user-email"
+          placeholder="example@email.com"
+          required
+        /><br />
+        <label class="standard-label" for="user-phone">Phone:</label>
+        <input type="tel" id="user-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" /><br />
+        <label class="standard-label" for="contact-message"
+          >Your message:
+        </label>
+        <textarea maxlength="240" id="contact-message" required></textarea
+        ><br />
+        <input id="robot" name="robot" type="checkbox" required />
+        <label for="robot">I am not a robot</label><br />
+        <input type="submit" value="Send message" />
+      </form>
+    </main>
+    <!-- Footer with links to social media profiles -->
+    <footer class="page-footer">
+      <p>Follow me on</p>
+      <div class="social-media">
+        <img src="./img/github-icon.svg" alt="GitHub" />
+        <img src="./img/instagram-icon.svg" alt="Instagram" />
+        <img src="./img/linkedin-icon.svg" alt="LinkedIn" />
+      </div>
+    </footer>
+    <script src="./js/tota11y.min.js"></script>
+  </body>
+</html>
