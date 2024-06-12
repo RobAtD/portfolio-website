@@ -17,7 +17,7 @@
 
 body {
     background-color: var(--background-color);
-    font-family: 'Titillium Web', 'sans-serif';
+    font-family: "Titillium Web", "sans-serif";
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -193,6 +193,24 @@ th {
     padding: 5px 10px;
 }
 
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.input-container label {
+    flex: 1 0 100px;
+    max-width: 150px;
+}
+
+.input-container input,
+.input-container textarea {
+    flex-basis: 200px;
+}
+
 /* footer styles */
 
 .page-footer {
@@ -293,6 +311,13 @@ img.page-header__item {
 
     .navigation-list {
         padding: 0;
+    }
+
+    .navigation-list__item,
+    .navigation-list__item--active,
+    .navigation-list__item:hover,
+    .navigation-list__item--active:hover {
+        padding: 10px 0;
     }
 
     main {
