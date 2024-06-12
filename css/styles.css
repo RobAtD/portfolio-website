@@ -8,7 +8,7 @@
     --button-color-primary: #357b70;
     --button-font-color: #fff;
     --shadow-color: #2b2b2b;
-    --border-bottom-color: rgba(43, 43, 43, 0.4);
+    --border-color: rgba(43, 43, 43, 0.4);
 }
 
 * {
@@ -75,7 +75,7 @@ input[type="submit"] {
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 2px solid var(--border-bottom-color);
+    border-bottom: 2px solid var(--border-color);
     transition: opacity 0.2s;
 }
 
@@ -209,6 +209,7 @@ th {
 .input-container input,
 .input-container textarea {
     flex-basis: 200px;
+    border: 1px solid var(--border-color);
 }
 
 /* footer styles */
@@ -230,7 +231,7 @@ th {
     background-color: var(--background-color);
     min-width: 320px;
     width: 100%;
-    border-bottom: 1px solid var(--border-bottom-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .page-header__item {
