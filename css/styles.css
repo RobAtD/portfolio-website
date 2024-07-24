@@ -3,6 +3,7 @@
     --link-color-visited: #900;
     --link-color-active: #ff1a1a;
     --link-color-shadow: rgba(43, 43, 43, 0.4);
+    --error-text-color: #be0000;
     --background-color: #f8faf9;
     --card-color: #dcd9d9;
     --button-color-primary: #357b70;
@@ -209,6 +210,11 @@ th {
 .input-container textarea {
     flex-basis: 200px;
     border: 1px solid var(--border-color);
+}
+
+.error-message {
+    flex-basis: 100%;
+    color: var(--error-text-color);
 }
 
 /* footer styles */
